@@ -2,8 +2,13 @@ services:
   postgres:
     image: 'postgres:latest'
     environment:
-      - 'POSTGRES_DB=mydatabase'
-      - 'POSTGRES_PASSWORD=secret'
-      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_DB=ledger_banking_db'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=user'
     ports:
-      - '5433:5432'
+      - '5434:5432'
+    volumes:
+        - 'ledger_banking_db_data:/var/lib/postgresql/data'
+
+volumes:
+  ledger_banking_db_data:
