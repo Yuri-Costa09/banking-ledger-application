@@ -56,6 +56,7 @@ public class Transaction {
 
         // 2. Construção
         Transaction tx = new Transaction();
+        tx.id = UUID.randomUUID();
         tx.sourceAccount = source;
         tx.targetAccount = target;
         tx.amount = amount;
@@ -99,5 +100,9 @@ public class Transaction {
 
     public void setTargetAccount(Account targetAccount) {
         this.targetAccount = targetAccount;
+    }
+
+    public UUID getId() {
+        return id;
     }
 }

@@ -41,7 +41,7 @@ public class Account {
         Account account = new Account();
         account.setId(UUID.randomUUID());
         account.setOwnerName(ownerName);
-        account.setBalance(BigDecimal.ZERO);
+        account.setBalance(BigDecimal.valueOf(100.00)); // valor inicial de 100.00
         LocalDateTime now = LocalDateTime.now();
         account.setCreatedAt(now);
         account.setUpdatedAt(now);

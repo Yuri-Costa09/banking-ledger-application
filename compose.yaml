@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: 'postgres:latest'
+    image: 'postgres:16'
     environment:
       - 'POSTGRES_DB=ledger_banking_db'
       - 'POSTGRES_PASSWORD=password'
